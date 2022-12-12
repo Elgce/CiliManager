@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbmi_hw"]=self["webpackChunkbmi_hw"]||[]).push([[469],{2469:function(t,e,i){i.r(e),i.d(e,{default:function(){return a}});var r=i(3396);function n(t,e,i,n,s,u){return(0,r.wg)(),(0,r.iD)("p")}var s={created(){this.setpath()},methods:{setpath(){this.$router.push("/index/activities/view")}}},u=i(89);const h=(0,u.Z)(s,[["render",n]]);var a=h}}]);
+//# sourceMappingURL=469.62be9665.js.map
