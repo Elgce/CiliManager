@@ -1,0 +1,45 @@
+<!-- 面包屑 -->
+<template>
+    <el-breadcrumb separator=">">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <template v-for="(item, index) in breadList">
+          <el-breadcrumb-item
+            v-if="item.name"
+            :key="index"
+            :to="item.path"
+          >{{ item.name }}</el-breadcrumb-item>
+        </template>
+    </el-breadcrumb>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      breadList: [],
+    }
+  },
+  methods: {
+    getMatched() {
+      this.breadList = this.$route.matched;
+    },
+  },
+  created() {
+    this.getMatched()
+  },
+  watch: {
+    $route() {
+      this.breadList = this.$route.matched;
+    }
+  }
+}
+</script>
+
+<style scoped>
+    .el-breadcrumb{
+        font-family:华文黑体;
+        font-size: 1.1rem;
+        margin-top: 28px;
+        margin-left: 15px;
+    }
+</style>
